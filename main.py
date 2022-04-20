@@ -26,8 +26,7 @@ def save_inventory():
     cur.execute(postgres_insert_query, record_to_insert)
     print("Record inserted successfully into mobile table")
     conn.commit() # <- We MUST commit to reflect the inserted data
-    conn.close()
-
+   
 
 
     print(n,bp,sp,sq)
@@ -60,7 +59,6 @@ def inventories():
    
 
     return render_template("inventory.html", rows=rows)
-
 
 
 
